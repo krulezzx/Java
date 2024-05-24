@@ -1,13 +1,15 @@
 package com.thealgorithms.sorts;
 
-public class DNFSort {
+public final class DNFSort {
+    private DNFSort() {
+    }
 
     // Sort the input array, the array is assumed to
     // have values in {0, 1, 2}
     static void sort012(int[] a, int arr_size) {
         int low = 0;
         int high = arr_size - 1;
-        int mid = 0, temp = 0;
+        int mid = 0, temp;
         while (mid <= high) {
             switch (a[mid]) {
             case 0: {
@@ -37,7 +39,7 @@ public class DNFSort {
         for (int i = 0; i < arr_size; i++) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println("");
+        System.out.println();
     }
 
     /*Driver function to check for above functions*/

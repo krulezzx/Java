@@ -13,9 +13,10 @@ class TreeNode {
     TreeNode left, right;
 
     // Constructor
-    public TreeNode(int key) {
+    TreeNode(int key) {
         this.key = key;
-        left = right = null;
+        left = null;
+        right = null;
     }
 }
 
@@ -27,7 +28,7 @@ class QItem {
     TreeNode node;
     int hd;
 
-    public QItem(TreeNode n, int h) {
+    QItem(TreeNode n, int h) {
         node = n;
         hd = h;
     }
@@ -39,11 +40,11 @@ class Tree {
     TreeNode root;
 
     // Constructors
-    public Tree() {
+    Tree() {
         root = null;
     }
 
-    public Tree(TreeNode n) {
+    Tree(TreeNode n) {
         root = n;
     }
 
@@ -87,7 +88,9 @@ class Tree {
 }
 
 // Driver class to test above methods
-public class PrintTopViewofTree {
+public final class PrintTopViewofTree {
+    private PrintTopViewofTree() {
+    }
 
     public static void main(String[] args) {
         /* Create following Binary Tree
